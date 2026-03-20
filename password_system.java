@@ -19,7 +19,7 @@ public class password_system {
                 System.out.println("Access Granted!");
                 isLoggedIn = true;
 
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i <= 5; i++) {
                     System.out.println("\n========= SIMPLE ATM SYSTEM =========\n");
                     System.out.println("[1] - Check Balance");
                     System.out.println("[2] - Deposit Money");
@@ -27,7 +27,6 @@ public class password_system {
                     System.out.println("[4] - Exit");
                     System.out.print("\nEnter your choice: ");
                     choice = input.nextInt();
-
                     switch (choice){
                         case 1:
                             System.out.println("Your current balance is: " + balance);
@@ -60,8 +59,8 @@ public class password_system {
                             System.out.println("Invalid option. Please choose between 1-4 only!");
 
                     }
+                    System.out.println("\nSession Ends... Please Try Again!\n");
                 }
-
             } else if (hotdog == 1){
                 System.out.println("Attempt " + hotdog + "! Incorrect PIN");
             } else if (hotdog == 2){
@@ -69,14 +68,9 @@ public class password_system {
             } else {
                 System.out.println("Attempt " + hotdog + "! Card BLocked!");
             }
-
         }
-
             if (!isLoggedIn) {
                 System.out.println("Please contact your bank.");
             }
-
-
-
     }
 }
